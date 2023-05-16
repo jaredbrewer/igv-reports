@@ -50,7 +50,7 @@ class BamReader:
 
 def parse_seqnames(header):
     seqnames = []
-    lines = header.split('\n')
+    lines = str(header).split('\n')
     for line in lines:
         if line.startswith('@SQ'):
             idx1 = line.find("SN:")
